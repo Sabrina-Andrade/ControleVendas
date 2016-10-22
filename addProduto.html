@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Adição de Produtos</title>
+
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+ 
+</head>
+<body> 
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+          <a class="navbar-brand" href="#">Controle de Vendas</a>
+         </div>
+      </div>
+  </nav>
+  
+  <div id="main" class="container-fluid">
+    <h3>Adicionar Produto</h3>
+     <form action="lista-prod.html">
+  <div class="row">
+  	  <div class="form-group col-md-4">
+  	  	<label for="campo1">Produto</label>
+  	  	<input type="text" class="form-control" id="campo1">
+  	  </div>
+	  <div class="form-group col-md-4">
+  	  	<label for="campo2">Código</label>
+  	  	<input type="text" class="form-control" id="campo2">
+  	  </div>
+	  <div class="form-group col-md-4">
+  	  	<label for="campo3">Quantidade</label>
+  	  	<input type="text" class="form-control" id="campo3">
+  	  </div>
+	</div>
+	
+	<div class="row">
+  	  <div class="form-group col-md-4">
+  	  	<label for="campo4">Valor (R$)</label>
+  	  	<input type="text" class="form-control" id="campo4">
+  	  </div>
+	  <div class="form-group col-md-4">
+  	  	<label for="campo5">Cliente</label>
+  	  	<input type="text" class="form-control" id="campo5">
+  	  </div>
+	  <select class="form-control form-group col-md-4">
+     <option>Produto Recebido?</option>
+       <option>Sim</option>
+       <option>Não</option>
+			
+   </select>
+<hr/>
+  <div id="actions" class="row">
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary" href="lista-prod.html">Salvar</button>
+      <a href="addProduto.html" class="btn btn-default">Cancelar</a>
+    </div>
+  </div>
+</form>
+ </div>
+
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

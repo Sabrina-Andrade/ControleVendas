@@ -1,0 +1,21 @@
+.container container-login {
+    font-size: 14px;
+	font-weight: bold;
+	color: black;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+ 
+    
+  
+    
+}
+.panel-body{
+    width: 312px;
+    height: 200px;
+    margin: 10px auto;
+    padding:10px;
+ 
+ 
+}
+

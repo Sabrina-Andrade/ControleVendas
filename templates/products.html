@@ -1,0 +1,40 @@
+<button type="button" ui-sref="new" class="btn btn-primary">Nova venda</button>
+<div class="input-group col-sm-6" style="float:right;margin-bottom:20px;">
+    <input class="form-control" id="search" type="text" placeholder="Digite sua pesquisa...">
+    <span class="input-group-btn">
+        <button class="btn btn-primary" type="submit">
+            <span class="glyphicon glyphicon-search"></span>
+        </button>
+    </span>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Nome do produto</th>
+            <th>Quantidade</th>
+            <th>Valor unitário</th>
+            <th>Valor total</th>
+            <th>Recebido</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-show="false">
+            <td colspan="7">Nenhuma venda efetuada.</td>
+        </tr>
+        <tr>
+            <td>Sabrina</td>
+            <td>Perfume Kaiak</td>
+            <td>1 un</td>
+            <td>R$ 90,00</td>
+            <td>R$ 90,00</td>
+            <td>Não</td>
+            <td class="actions">
+                <a class="btn btn-warning btn-xs" ng-click="edit(product)">Editar</a>
+                <a class="btn btn-danger btn-xs" ng-click="deleteProduct(product.id)">Excluir</a>
+            </td>  
+        </tr>
+    </tbody>
+</table>
+<div ng-include="'./templates/confirm.html'"></div>

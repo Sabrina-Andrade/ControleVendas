@@ -1,0 +1,45 @@
+<div id="main" class="container-fluid">
+	<form>
+		<div class="row">
+			<div class="form-group col-md-4">
+				<label for="name">Cliente *</label>
+				<input type="text" class="form-control" id="name" required="true" ng-model="product.name">
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-4">
+				<label for="description">Nome do produto *</label>
+				<input type="text" class="form-control" id="description" required="true" ng-model="product.description">
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-4">
+				<label for="reg">Quantidade *</label>
+				<input type="text" class="form-control" id="reg" required="true" ng-model="product.reg">
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-4">
+				<label for="lab">Valor unitário *</label>
+				<input type="text" class="form-control" id="lab" required="true" ng-model="product.lab">
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-4">
+				<label for="val">Pago</label>
+				<label class="radio-inline">
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Sim
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Não
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-4">
+				<button class="btn btn-primary" type="button" ui-sref="sale">Cancelar</button>
+				<button class="btn btn-primary" type="submit" data-ng-click="save(this)">Salvar</button>
+			</div>
+		</div>
+	</form>
+</div>

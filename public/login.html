@@ -1,0 +1,27 @@
+<div ng-controller="LoginController" class="login-container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title">Controle de Vendas | Login</div>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal" ng-submit="doLogin()">
+                <div class="input-group input-form-login">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input required type="text" name="username" class="form-control" ng-model="user.username" placeholder="Usuário">
+                </div>
+
+                <div class="input-group input-form-login">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input required type="password" name="password" class="form-control" ng-model="user.password" placeholder="Senha">
+                </div>
+
+                <div ng-show="isInvalid" class="alert alert-danger">Usuário e/ou senha inválidos</div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="submit" class="btn btn-success btn-login" value="Login">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

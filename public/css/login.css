@@ -1,0 +1,13 @@
+.login-container {
+    margin: 10% auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-form-login {
+    margin-bottom: 25px;
+}
+
+.btn-login {
+    float: right;
+}

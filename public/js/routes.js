@@ -2,19 +2,23 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('login', {
             url: "/login",
-            templateUrl: "login.html"
+            templateUrl: "login.html",
+            controller: 'LoginController'
         })
-        .state('sale', {
-            url: "/sale",
-            templateUrl: "products.html"
+        .state('sales', {
+            url: "/sales",
+            templateUrl: "sales.html",
+            controller: 'SaleController'
         })
         .state('new', {
-            url: "/new",
-            templateUrl: "form.html"
+            url: "/sales/new",
+            templateUrl: "form.html",
+            controller: 'SaleController'
         })
         .state('edit', {
-            url: "/edit",
-            templateUrl: "form.html"
+            url: "/sales/edit/:id",
+            templateUrl: "form.html",
+            controller: 'SaleController'
         })
         .state('reports', {
             url: "/reports",

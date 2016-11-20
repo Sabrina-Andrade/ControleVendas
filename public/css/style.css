@@ -3,3 +3,11 @@
     border: none;
     box-shadow: none;
 }
+
+.checkbox-input {
+    margin-left: 0px !important; 
+}
+
+.checkbox-label {
+    font-weight: bold;
+}

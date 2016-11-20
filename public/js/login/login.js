@@ -5,18 +5,18 @@ app.controller('LoginController', function ($rootScope, $scope, $http, $state) {
     $scope.doLogin = function () {
         $http({
             method: 'POST',
-            url: '/auth',
+            url: '/login/auth',
             data: $scope.user,
-            headers: {'Content-Type': 'application/json'}
+            timeout: 10000
         }).then(successCallback, errorCallback)
     }
 
     function successCallback(result) {
-        $state.go('sale')
+        $state.go('sales')
     }
 
     function errorCallback(error) {
-        $rootScope.isInvalid = true;
+        $rootScope.isInvalid = true
     }
 
 })

@@ -8,7 +8,7 @@
         </button>
     </span>
 </div>
-<table class="table table-bordered">
+<table class="table table-bordered" data-ng-init="getAll()">
     <thead>
         <tr>
             <th>Cliente</th>
@@ -21,21 +21,21 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-show="false">
+        <tr ng-if="sales.length == 0">
             <td colspan="7">Nenhuma venda efetuada.</td>
         </tr>
-        <tr>
-            <td>Sabrina</td>
-            <td>Perfume Kaiak</td>
-            <td>1 un</td>
-            <td>R$ 90,00</td>
-            <td>R$ 90,00</td>
-            <td>Não</td>
+        <tr ng-repeat="sale in sales track by (sale.id)">
+            <td>{{sale.client}}</td>
+            <td>{{sale.product}}</td>
+            <td>{{sale.quantity}}</td>
+            <td>{{sale.unitary}}</td>
+            <td>{{sale.total}}</td>
+            <td>{{sale.received}}</td>
             <td class="actions">
-                <a class="btn btn-warning btn-xs" ng-click="edit(product)">Editar</a>
-                <a class="btn btn-danger btn-xs" ng-click="deleteProduct(product.id)">Excluir</a>
-            </td>  
+                <a class="btn btn-warning btn-xs" ui-sref="edit({id:sale.id})">Editar</a>
+                <a class="btn btn-danger btn-xs" ng-click="delete(sale.id)">Excluir</a>
+            </td>
         </tr>
     </tbody>
 </table>
-<div ng-include="'./templates/confirm.html'"></div>
+<div ng-include="'confirm.html'"></div>

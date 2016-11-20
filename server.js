@@ -1,29 +1,22 @@
-var express = require('express')
-var app = express();
-var bodyParser = require('body-parser')
+"use strict"
+
+const express = require("express")
+const bodyParser = require("body-parser")
+
+const app = express()
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(express.static("public"))
 
-app.use(express.static('public'))
-
-app.get('/', function (req, res) {
-    res.redirect('/index.html')
+app.get("/", function (request, response) {
+    res.send('index.html')
 })
 
-app.post('/auth', function(req, res) {
-	LoginService = require('./app/LoginService')
-	let username = req.body.username
-    let password = req.body.password
-	LoginService.auth(username, password, function callback(user){
-		if (user) {
-			res.send(user)
-		} else {
-			res.status(404)
-			   .send('user_not_found')
-		}
-	})
-})
+app.use("/login", require("./app/controller/loginController"))
+app.use("/sales", require("./app/controller/saleController"))
 
-var server = app.listen(3030, function () {
-    console.log('Server started')
+const hostname = "localhost"
+const port = 3000
+
+app.listen(port, function () {
+    console.log(`Server started: http://${hostname}:${port}`)
 })

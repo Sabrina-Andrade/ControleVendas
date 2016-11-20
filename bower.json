@@ -1,0 +1,10 @@
+{
+  "name": "ControleVendas",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^3.3.7",
+    "AngularJS-Toaster": "angularjs-toaster#^2.1.0"
+  }
+}

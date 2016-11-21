@@ -11,3 +11,15 @@
 .checkbox-label {
     font-weight: bold;
 }
+
+.col-delete a {
+    cursor: pointer
+}
+
+.col-edit, .col-delete {
+    width: 25px;
+}
+
+.col-edit i, .col-delete i {
+    color: #000;
+}

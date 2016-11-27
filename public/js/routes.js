@@ -22,7 +22,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('reports', {
             url: "/reports",
-            templateUrl: "reports.html"
+            templateUrl: "reports.html",
+            controller: 'ReportController'
         })
 
         $urlRouterProvider.otherwise('login');

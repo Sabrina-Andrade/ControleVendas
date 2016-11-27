@@ -23,3 +23,30 @@
 .col-edit i, .col-delete i {
     color: #000;
 }
+
+.col-received {
+    text-align: center;
+    width: 100px;
+}
+
+.search-div {
+    float: right !important;
+    margin-bottom: 20px;
+}
+
+.chart-report {
+    height: 600px;
+    width: 100%;
+}
+
+.filter-date {
+    height: 80px;
+}
+
+.btn-search {
+    margin-top: 25px;
+}
+
+.btn-new {
+    margin-bottom: 20px;
+}

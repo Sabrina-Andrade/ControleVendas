@@ -14,7 +14,12 @@ app.controller('SaleController', function ($rootScope, $scope, $http, $state, to
         $scope.sales = result.data
     }
 
-    $scope.onSubmit = function () {
+    $scope.update = function (sale) {
+        $scope.sale = sale
+        $scope.save()
+    }
+
+    $scope.save = function () {
         let method = $scope.sale.id > 0 ? 'PUT' : 'POST'
         let url = $scope.sale.id > 0 ? '/sales/edit' : '/sales/new'
         $http({

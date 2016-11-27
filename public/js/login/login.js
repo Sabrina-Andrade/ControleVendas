@@ -12,6 +12,10 @@ app.controller('LoginController', function ($rootScope, $scope, $http, $state) {
     }
 
     function successCallback(result) {
+        let userLogged = {}
+        userLogged.name = result.data.name
+        userLogged.authenticated = true
+        window.localStorage.setItem('userLogged', JSON.stringify(userLogged))
         $state.go('sales')
     }
 

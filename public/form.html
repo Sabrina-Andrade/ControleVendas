@@ -1,6 +1,6 @@
 <div ng-include="'menu.html'"></div>
 <div id="main" class="container-fluid">
-	<form ng-submit="onSubmit()">
+	<form ng-submit="save()">
 		<div class="row">
 			<div class="form-group col-md-4">
 				<label for="name">Cliente *</label>
@@ -22,7 +22,7 @@
 		<div class="row">
 			<div class="form-group col-md-4">
 				<label for="unitary">Valor unitário *</label>
-				<input id="unitary" type="number" min="0" class="form-control" required="true" ng-model="sale.unitary">
+				<input id="unitary" type="number" min="0" class="form-control" required="true" ng-model="sale.unitary" step="0.01">
 			</div>
 		</div>
 		<div class="row">

@@ -13,6 +13,7 @@ app.get("/", function (request, response) {
 
 app.use("/login", require("./app/controller/loginController"))
 app.use("/sales", require("./app/controller/saleController"))
+app.use("/reports", require("./app/controller/reportController"))
 
 const hostname = "localhost"
 const port = 3000

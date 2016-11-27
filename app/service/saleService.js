@@ -2,7 +2,7 @@ const db = require("../../config/database.js")
 
 var saleService = {
 	getAll: function(callback) {
-		db.query("SELECT * FROM sales", function(err, rows) {
+		db.query("SELECT * , (sum(quantity) * unitary) AS total FROM sales GROUP BY id ORDER BY client", function(err, rows) {
 			if (err) throw err
 			callback(rows);
 		})
@@ -24,6 +24,8 @@ var saleService = {
 	},
 
     update: function(sale, callback) {
+		if (sale.sale_date) delete sale.sale_date
+        if (sale.total) delete sale.total
 		db.query("UPDATE sales SET ? WHERE id = ?", [sale, sale.id], function(err, rows) {
 			if (err) throw err
             callback(rows.insertId)

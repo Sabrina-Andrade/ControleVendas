@@ -1,13 +1,5 @@
 <div ng-include="'menu.html'"></div>
-<button type="button" ui-sref="new" class="btn btn-primary">Nova venda</button>
-<div class="input-group col-sm-6" style="float:right;margin-bottom:20px;">
-    <input class="form-control" id="search" type="text" placeholder="Digite sua pesquisa...">
-    <span class="input-group-btn">
-        <button class="btn btn-primary" type="submit">
-            <span class="glyphicon glyphicon-search"></span>
-        </button>
-    </span>
-</div>
+<button type="button" ui-sref="new" class="btn btn-primary btn-new">Nova venda</button>
 <table class="table table-bordered" data-ng-init="getAll()">
     <thead>
         <tr>
@@ -17,6 +9,7 @@
             <th>Valor unitário</th>
             <th>Valor total</th>
             <th>Recebido</th>
+            <th></th>
             <th></th>
         </tr>
     </thead>
@@ -28,9 +21,11 @@
             <td>{{sale.client}}</td>
             <td>{{sale.product}}</td>
             <td>{{sale.quantity}}</td>
-            <td>{{sale.unitary}}</td>
-            <td>{{sale.total}}</td>
-            <td style="text-align:center;width:100px"><input type="checkbox" ng-model="sale.received" ng-checked="sale.received == 1"></td>
+            <td>R$ {{sale.unitary.toFixed(2)}}</td>
+            <td>R$ {{sale.total.toFixed(2)}}</td>
+            <td class="col-received">
+                <input type="checkbox" ng-model="sale.received" ng-checked="sale.received == 1" ng-change="update(sale)">
+            </td>
             <td class="col-edit">
                 <a ui-sref="edit({id:sale.id})" title="Editar"><i class="glyphicon glyphicon-edit"></i></a>
             </td>
